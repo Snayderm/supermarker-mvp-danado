@@ -30,33 +30,33 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PayModeView));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPagePayModeList = new System.Windows.Forms.TabPage();
-            this.tabPagePayModeDetail = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.TxtSearch = new System.Windows.Forms.TextBox();
-            this.BtnSearch = new System.Windows.Forms.Button();
-            this.DgPayMode = new System.Windows.Forms.DataGridView();
-            this.BtnNew = new System.Windows.Forms.Button();
-            this.BtnEdit = new System.Windows.Forms.Button();
-            this.BtnDelete = new System.Windows.Forms.Button();
             this.BtnClose = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.TxtPayModeId = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.TxtPayModeName = new System.Windows.Forms.TextBox();
+            this.BtnDelete = new System.Windows.Forms.Button();
+            this.BtnEdit = new System.Windows.Forms.Button();
+            this.BtnNew = new System.Windows.Forms.Button();
+            this.DgPayMode = new System.Windows.Forms.DataGridView();
+            this.BtnSearch = new System.Windows.Forms.Button();
+            this.TxtSearch = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabPagePayModeDetail = new System.Windows.Forms.TabPage();
+            this.BtnCancel = new System.Windows.Forms.Button();
+            this.BtnSave = new System.Windows.Forms.Button();
             this.TxtPayModeObservation = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.BtnSave = new System.Windows.Forms.Button();
-            this.BtnCancel = new System.Windows.Forms.Button();
+            this.TxtPayModeName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TxtPayModeId = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPagePayModeList.SuspendLayout();
-            this.tabPagePayModeDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgPayMode)).BeginInit();
+            this.tabPagePayModeDetail.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,16 +69,6 @@
             this.panel1.Size = new System.Drawing.Size(704, 100);
             this.panel1.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Rockwell Extra Bold", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(151, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 40);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Pay Mode";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Supermarket_mvp.Properties.Resources.buy;
@@ -88,6 +78,16 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Rockwell Extra Bold", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(151, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(217, 40);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Pay Mode";
             // 
             // tabControl1
             // 
@@ -118,6 +118,80 @@
             this.tabPagePayModeList.Text = "Pay Mode List";
             this.tabPagePayModeList.UseVisualStyleBackColor = true;
             // 
+            // BtnClose
+            // 
+            this.BtnClose.Image = global::Supermarket_mvp.Properties.Resources.cerrar;
+            this.BtnClose.Location = new System.Drawing.Point(577, 256);
+            this.BtnClose.Name = "BtnClose";
+            this.BtnClose.Size = new System.Drawing.Size(91, 57);
+            this.BtnClose.TabIndex = 7;
+            this.BtnClose.UseVisualStyleBackColor = true;
+            // 
+            // BtnDelete
+            // 
+            this.BtnDelete.Image = global::Supermarket_mvp.Properties.Resources.delete;
+            this.BtnDelete.Location = new System.Drawing.Point(577, 194);
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.Size = new System.Drawing.Size(91, 56);
+            this.BtnDelete.TabIndex = 6;
+            this.BtnDelete.UseVisualStyleBackColor = true;
+            // 
+            // BtnEdit
+            // 
+            this.BtnEdit.Image = global::Supermarket_mvp.Properties.Resources.edit;
+            this.BtnEdit.Location = new System.Drawing.Point(577, 132);
+            this.BtnEdit.Name = "BtnEdit";
+            this.BtnEdit.Size = new System.Drawing.Size(91, 56);
+            this.BtnEdit.TabIndex = 5;
+            this.BtnEdit.UseVisualStyleBackColor = true;
+            // 
+            // BtnNew
+            // 
+            this.BtnNew.Image = global::Supermarket_mvp.Properties.Resources._new;
+            this.BtnNew.Location = new System.Drawing.Point(577, 70);
+            this.BtnNew.Name = "BtnNew";
+            this.BtnNew.Size = new System.Drawing.Size(91, 56);
+            this.BtnNew.TabIndex = 4;
+            this.BtnNew.UseVisualStyleBackColor = true;
+            // 
+            // DgPayMode
+            // 
+            this.DgPayMode.AllowUserToAddRows = false;
+            this.DgPayMode.AllowUserToDeleteRows = false;
+            this.DgPayMode.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgPayMode.Location = new System.Drawing.Point(11, 70);
+            this.DgPayMode.Name = "DgPayMode";
+            this.DgPayMode.ReadOnly = true;
+            this.DgPayMode.RowTemplate.Height = 25;
+            this.DgPayMode.Size = new System.Drawing.Size(537, 243);
+            this.DgPayMode.TabIndex = 3;
+            // 
+            // BtnSearch
+            // 
+            this.BtnSearch.Image = ((System.Drawing.Image)(resources.GetObject("BtnSearch.Image")));
+            this.BtnSearch.Location = new System.Drawing.Point(508, 26);
+            this.BtnSearch.Name = "BtnSearch";
+            this.BtnSearch.Size = new System.Drawing.Size(40, 38);
+            this.BtnSearch.TabIndex = 2;
+            this.BtnSearch.UseVisualStyleBackColor = true;
+            // 
+            // TxtSearch
+            // 
+            this.TxtSearch.Location = new System.Drawing.Point(6, 34);
+            this.TxtSearch.Name = "TxtSearch";
+            this.TxtSearch.PlaceholderText = "Data to search";
+            this.TxtSearch.Size = new System.Drawing.Size(496, 23);
+            this.TxtSearch.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 15);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Search Pay Mode";
+            // 
             // tabPagePayModeDetail
             // 
             this.tabPagePayModeDetail.Controls.Add(this.BtnCancel);
@@ -136,114 +210,23 @@
             this.tabPagePayModeDetail.Text = "Pay Mode Detail";
             this.tabPagePayModeDetail.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // BtnCancel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 15);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Search Pay Mode";
+            this.BtnCancel.Image = global::Supermarket_mvp.Properties.Resources.cancel;
+            this.BtnCancel.Location = new System.Drawing.Point(194, 261);
+            this.BtnCancel.Name = "BtnCancel";
+            this.BtnCancel.Size = new System.Drawing.Size(75, 39);
+            this.BtnCancel.TabIndex = 7;
+            this.BtnCancel.UseVisualStyleBackColor = true;
             // 
-            // TxtSearch
+            // BtnSave
             // 
-            this.TxtSearch.Location = new System.Drawing.Point(6, 34);
-            this.TxtSearch.Name = "TxtSearch";
-            this.TxtSearch.PlaceholderText = "Data to search";
-            this.TxtSearch.Size = new System.Drawing.Size(100, 23);
-            this.TxtSearch.TabIndex = 1;
-            // 
-            // BtnSearch
-            // 
-            this.BtnSearch.Image = ((System.Drawing.Image)(resources.GetObject("BtnSearch.Image")));
-            this.BtnSearch.Location = new System.Drawing.Point(123, 24);
-            this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(40, 38);
-            this.BtnSearch.TabIndex = 2;
-            this.BtnSearch.UseVisualStyleBackColor = true;
-            // 
-            // DgPayMode
-            // 
-            this.DgPayMode.AllowUserToAddRows = false;
-            this.DgPayMode.AllowUserToDeleteRows = false;
-            this.DgPayMode.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgPayMode.Location = new System.Drawing.Point(11, 70);
-            this.DgPayMode.Name = "DgPayMode";
-            this.DgPayMode.ReadOnly = true;
-            this.DgPayMode.RowTemplate.Height = 25;
-            this.DgPayMode.Size = new System.Drawing.Size(240, 150);
-            this.DgPayMode.TabIndex = 3;
-            // 
-            // BtnNew
-            // 
-            this.BtnNew.Image = global::Supermarket_mvp.Properties.Resources._new;
-            this.BtnNew.Location = new System.Drawing.Point(632, 70);
-            this.BtnNew.Name = "BtnNew";
-            this.BtnNew.Size = new System.Drawing.Size(42, 39);
-            this.BtnNew.TabIndex = 4;
-            this.BtnNew.UseVisualStyleBackColor = true;
-            // 
-            // BtnEdit
-            // 
-            this.BtnEdit.Image = global::Supermarket_mvp.Properties.Resources.edit;
-            this.BtnEdit.Location = new System.Drawing.Point(632, 112);
-            this.BtnEdit.Name = "BtnEdit";
-            this.BtnEdit.Size = new System.Drawing.Size(42, 39);
-            this.BtnEdit.TabIndex = 5;
-            this.BtnEdit.UseVisualStyleBackColor = true;
-            // 
-            // BtnDelete
-            // 
-            this.BtnDelete.Image = global::Supermarket_mvp.Properties.Resources.delete;
-            this.BtnDelete.Location = new System.Drawing.Point(632, 157);
-            this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(42, 37);
-            this.BtnDelete.TabIndex = 6;
-            this.BtnDelete.UseVisualStyleBackColor = true;
-            // 
-            // BtnClose
-            // 
-            this.BtnClose.Image = global::Supermarket_mvp.Properties.Resources.cerrar;
-            this.BtnClose.Location = new System.Drawing.Point(632, 200);
-            this.BtnClose.Name = "BtnClose";
-            this.BtnClose.Size = new System.Drawing.Size(42, 39);
-            this.BtnClose.TabIndex = 7;
-            this.BtnClose.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(23, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 15);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Pay Mode Id";
-            // 
-            // TxtPayModeId
-            // 
-            this.TxtPayModeId.Location = new System.Drawing.Point(25, 42);
-            this.TxtPayModeId.Name = "TxtPayModeId";
-            this.TxtPayModeId.Size = new System.Drawing.Size(170, 23);
-            this.TxtPayModeId.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(21, 79);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 15);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Pay Mode Name";
-            // 
-            // TxtPayModeName
-            // 
-            this.TxtPayModeName.Location = new System.Drawing.Point(23, 109);
-            this.TxtPayModeName.Name = "TxtPayModeName";
-            this.TxtPayModeName.PlaceholderText = "Pay Mode Name";
-            this.TxtPayModeName.Size = new System.Drawing.Size(282, 23);
-            this.TxtPayModeName.TabIndex = 3;
+            this.BtnSave.Image = global::Supermarket_mvp.Properties.Resources.save;
+            this.BtnSave.Location = new System.Drawing.Point(51, 261);
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Size = new System.Drawing.Size(75, 39);
+            this.BtnSave.TabIndex = 6;
+            this.BtnSave.UseVisualStyleBackColor = true;
             // 
             // TxtPayModeObservation
             // 
@@ -264,23 +247,40 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Pay Mode Observation";
             // 
-            // BtnSave
+            // TxtPayModeName
             // 
-            this.BtnSave.Image = global::Supermarket_mvp.Properties.Resources.save;
-            this.BtnSave.Location = new System.Drawing.Point(51, 261);
-            this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(75, 39);
-            this.BtnSave.TabIndex = 6;
-            this.BtnSave.UseVisualStyleBackColor = true;
+            this.TxtPayModeName.Location = new System.Drawing.Point(23, 109);
+            this.TxtPayModeName.Name = "TxtPayModeName";
+            this.TxtPayModeName.PlaceholderText = "Pay Mode Name";
+            this.TxtPayModeName.Size = new System.Drawing.Size(282, 23);
+            this.TxtPayModeName.TabIndex = 3;
             // 
-            // BtnCancel
+            // label4
             // 
-            this.BtnCancel.Image = global::Supermarket_mvp.Properties.Resources.cancel;
-            this.BtnCancel.Location = new System.Drawing.Point(194, 261);
-            this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(75, 39);
-            this.BtnCancel.TabIndex = 7;
-            this.BtnCancel.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(21, 79);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(105, 15);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Pay Mode Name";
+            // 
+            // TxtPayModeId
+            // 
+            this.TxtPayModeId.Location = new System.Drawing.Point(25, 42);
+            this.TxtPayModeId.Name = "TxtPayModeId";
+            this.TxtPayModeId.Size = new System.Drawing.Size(170, 23);
+            this.TxtPayModeId.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(23, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 15);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Pay Mode Id";
             // 
             // PayModeView
             // 
@@ -297,9 +297,9 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPagePayModeList.ResumeLayout(false);
             this.tabPagePayModeList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgPayMode)).EndInit();
             this.tabPagePayModeDetail.ResumeLayout(false);
             this.tabPagePayModeDetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgPayMode)).EndInit();
             this.ResumeLayout(false);
 
         }
