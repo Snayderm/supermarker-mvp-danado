@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Supermarket_mvp.Presenters
+namespace Supermarket_mvp._Repositories
 {
-    internal class PayModePresenter
+    internal class BaseRepository
     {
+        protected string connectionString;
     }
 }

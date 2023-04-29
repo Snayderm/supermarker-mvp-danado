@@ -12,9 +12,12 @@ namespace Supermarket_mvp.Views
 {
     public partial class PayModeView : Form, IPayModeView
     {
+
         private bool isEdit;
         private bool isSuccessful;
         private string message;
+
+
         public PayModeView()
         {
             InitializeComponent();
@@ -26,7 +29,6 @@ namespace Supermarket_mvp.Views
         private void AssociateAndRaiseViewEvents()
         {
             BtnSearch.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
-
             TxtSearch.KeyDown += (s, e) =>
             {
                 if (e.KeyCode == Keys.Enter)
@@ -41,57 +43,75 @@ namespace Supermarket_mvp.Views
         public event EventHandler EditEvent;
         public event EventHandler DeleteEvent;
         public event EventHandler SaveEvent;
+        
         public event EventHandler CancelEvent;
+
+        private void PayModeView_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
 
         public void SetPayModeListBildingSource(BindingSource payModeList)
         {
             DgPayMode.DataSource = payModeList;
-
         }
         public string PayModeId
         {
             get { return TxtPayModeId.Text; }
             set { TxtPayModeId.Text = value; }
         }
-
         public string PayModeName
         {
             get { return TxtPayModeName.Text; }
             set { TxtPayModeName.Text = value; }
         }
-
         public string PayModeObservation
         {
             get { return TxtPayModeObservation.Text; }
-            set { TxtPayModeObservation.Text= value; }
+            set { TxtPayModeObservation.Text = value; }
         }
-
         public string SearchValue
         {
             get { return TxtSearch.Text; }
-            set { TxtSearch.Text = value;}
+            set { TxtSearch.Text = value; }
         }
-
         public bool IsEdit
         {
             get { return isEdit; }
             set { isEdit = value; }
-
         }
-
         public bool IsSuccessful
         {
             get { return isSuccessful; }
             set { isSuccessful = value; }
         }
-
-
         public string Message
-
         {
             get { return message; }
-            set { message= value; }
+            set { message = value; }
         }
 
+
     }
+
 }
