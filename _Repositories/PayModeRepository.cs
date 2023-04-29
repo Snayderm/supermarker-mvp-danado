@@ -49,7 +49,7 @@ namespace Supermarket_mvp._Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = "SELECT * FROM PayMode ORDER BY Pay:Mode_Id DESC";
+                command.CommandText = "SELECT * FROM PayMode ORDER BY Pay_Mode_Id DESC";
                 using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read())
@@ -76,8 +76,8 @@ namespace Supermarket_mvp._Repositories
                 connection.Open();
                 command.Connection = connection;
                 command.CommandText = @"SELECT * FROM PayMode
-                                        WHERE Pay_Mode_Id=@id or Pay_mode_Name LIKE @Name+ '%'
-                                        ORDER By Pay_Mode_Id Desc";
+                                        WHERE Pay_Mode_Id=@id or Pay_Mode_Name LIKE @name+ '%'
+                                        ORDER By Pay_Mode_Id DESC";
                 command.Parameters.Add("@id", SqlDbType.Int).Value = payModeId;
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = payModeName;
                 using (var reader = command.ExecuteReader())
@@ -86,7 +86,7 @@ namespace Supermarket_mvp._Repositories
                     {
                         var payModeModel = new PayModeModel();
                         payModeModel.Id = (int)reader["Pay_Mode_Id"];
-                        payModeModel.Name = reader["Pay_mode_Name"].ToString();
+                        payModeModel.Name = reader["Pay_Mode_Name"].ToString();
                         payModeModel.Observation = reader["Pay_Mode_Observation"].ToString();
                         payModeList.Add(payModeModel);
                     }

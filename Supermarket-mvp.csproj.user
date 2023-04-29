@@ -7,7 +7,7 @@
     <ActiveDebugProfile>Supermarket-mvp</ActiveDebugProfile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Update="Views\PayModeView.cs">
+    <Compile Update="Views\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
